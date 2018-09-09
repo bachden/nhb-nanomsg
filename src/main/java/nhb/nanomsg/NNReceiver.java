@@ -110,6 +110,7 @@ public abstract class NNReceiver extends NNStartable {
 					totalRecvBytes += rc;
 					totalRecvMsg++;
 					try {
+						buffer.rewind();
 						this.onRecv(rc, buffer);
 					} catch (Exception e) {
 						e.printStackTrace();
