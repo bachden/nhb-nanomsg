@@ -34,7 +34,7 @@ public abstract class NNReceiver extends NNStartable {
 	@Override
 	protected final void onStart() {
 		if (this.poller != null) {
-			throw new IllegalStateException("Poller cannot be exist on start");
+			throw new IllegalStateException("Poller cannot exist on start");
 		}
 
 		this.startedSignal = new CountDownLatch(1);
